@@ -1,0 +1,11 @@
+<library path="fr3_controller">
+
+  <class name="fr3_controller/TestFr3Controller"
+         type="fr3_controller::TestFr3Controller"
+         base_class_type="controller_interface::ControllerInterface">
+    <description>
+      TestFr3Controller controller.
+    </description>
+  </class>
+
+</library>
