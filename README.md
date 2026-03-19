@@ -60,7 +60,7 @@ source ~/ros2_ws/install/setup.bash
 - Contains FR3 robot descriptions (`xacro`, mesh, RViz configs).
 - Supports single-arm and dual-arm configurations.
 ```bash
-# FR3 visualization (optionally with mobile base)
+# FR3 visualization
 ros2 launch fr3_description visualize_fr3.launch.py \
   robot_side:=left load_gripper:=true
 
@@ -85,7 +85,7 @@ ros2 launch fr3_description visualize_fr3.launch.py \
 ```bash
 # FR3 controller
 ros2 launch fr3_controller fr3_controller.launch.py \
-  robot_side:=left load_gripper:=true load_mobile:=false use_fake_hardware:=true controller_name:=test_fr3_controller
+  robot_side:=left load_gripper:=true use_fake_hardware:=true controller_name:=test_fr3_controller
 ```
 
 - Main launch arguments:
@@ -108,7 +108,7 @@ All controller launch files support `use_mujoco:=true` to run in MuJoCo instead 
 ```bash
 # FR3 in MuJoCo (quick start)
 ros2 launch fr3_controller fr3_controller.launch.py \
-  robot_side:=left load_gripper:=true load_mobile:=false use_mujoco:=true
+  robot_side:=left load_gripper:=true use_mujoco:=true controller_name:=test_fr3_controller
 ```
 
 ---
